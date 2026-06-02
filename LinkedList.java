@@ -76,6 +76,18 @@ class LinkedList {
         temp.next = temp.next.next;
     }
 
+    void search(int data){
+        Node temp = head;
+        while(temp != null){
+            if(temp.data == data){
+                System.out.println(true);
+                return;
+            }
+            temp = temp.next;
+        }
+        System.out.println(false);
+    }
+
 
     void display(){
         Node temp = head;
@@ -101,5 +113,6 @@ class LinkedList {
         List.display();
         List.DeleteIndex(4);
         List.display();
+        List.search(60);
     }
 }
