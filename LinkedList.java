@@ -88,6 +88,19 @@ class LinkedList {
         System.out.println(false);
     }
 
+    void Reverse(){
+        Node prev = null;
+        Node current = head;
+        Node next = null;
+        while(current != null){
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+        head = prev;
+    }
+
 
     void display(){
         Node temp = head;
@@ -105,14 +118,17 @@ class LinkedList {
         List.InsertBeginning(30);
         List.InsertBeginning(40);
         List.display();
-        List.InsertBeginning(5);
+        // List.InsertBeginning(5);
+        // List.display();
+        // List.InsertIndex(2, 60);
+        // List.display();
+        // List.delete(30);
+        // List.display();
+        // List.DeleteIndex(4);
+        // List.display();
+        // List.search(60);
+
+        List.Reverse();
         List.display();
-        List.InsertIndex(2, 60);
-        List.display();
-        List.delete(30);
-        List.display();
-        List.DeleteIndex(4);
-        List.display();
-        List.search(60);
     }
 }
